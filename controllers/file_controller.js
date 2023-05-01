@@ -68,7 +68,7 @@ module.exports.view = async function(req, res) {
 /** ------------------ EXPORTING FUNCTION To delete the file ------------------ **/
 module.exports.delete = async function(req, res) {
     try {
-        console.log(req.params);
+        // console.log(req.params);
         let isFile = await CSV.findOne({file: req.params.id});
 
         if(isFile){
