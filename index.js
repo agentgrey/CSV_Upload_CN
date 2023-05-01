@@ -2,14 +2,17 @@
 const express = require('express');
 const port = 8000;
 const app = express();
-const expressLayouts = require('express-ejs-layouts');
+const path = require('path');
 
+const expressLayouts = require('express-ejs-layouts');
+const csv = require('csv-parser');
+const db = require("./config/mongoose");
 
 // setting layouts
 app.use(expressLayouts);
 
 //accesing static files from assets folder
-app.use(express.static('assets'));    
+app.use(express.static('./assets'));    
 
 //setting up view engine
 app.set("view engine", "ejs");
