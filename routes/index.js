@@ -11,7 +11,8 @@ const upload = multer({ dest: 'uploads/files'})
 /** ------------------ MAKING ROUTES ------------------ **/
 router.get('/', homeController.home);
 router.post('/upload', upload.single('file') ,fileController.upload);
-router.get('/view', fileController.view);
+router.get('/view/:id', fileController.view);
+router.get('/delete/:id', fileController.delete);
 
 
 /** ------------------ EXPORTING ROUTER ------------------ **/

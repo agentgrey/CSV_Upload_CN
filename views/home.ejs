@@ -32,7 +32,7 @@
 </div>
 
 <!-- show uploaded files -->
-<div class="files-list">  
+<div class="files-list" style="margin-bottom: 50px;">  
     <div class="list-center-text">
         <h2>Uploaded files</h2>
     </div>
@@ -53,13 +53,13 @@
             <tbody>
                 <% for(let file of files) { %>
                 <tr>
-                    <td><%= file.filename %></td>
+                    <td><%= file.fileName %></td>
                     <td><%= file.createdAt.toLocaleDateString() %></td>
                     <td><%= file.createdAt.toLocaleTimeString() %></td>
-                    <td><a href="/view" class="view-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></td>
-                    <td><a href="/delete/<%= file.filename %>" class="delete-link"><i class="fa-regular fa-trash-can " style="color: #f00;"></i></a></td>
+                    <td><a href="/view/<%= file.file %>" class="view-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></td>
+                    <td><a href="/delete/<%= file.file %>" class="delete-link"><i class="fa-regular fa-trash-can " style="color: #f00;"></i></a></td>
                 </tr>
-                <% }; %>
+                <% } %>
             </tbody>
         </table>
     <% } %>

@@ -7,9 +7,14 @@ const path = require('path');
 const expressLayouts = require('express-ejs-layouts');
 const csv = require('csv-parser');
 const db = require("./config/mongoose");
+const bodyParser = require('body-parser');
 
 // setting layouts
 app.use(expressLayouts);
+
+// middleware for body-parser
+app.use(bodyParser.json());
+app.use(express.urlencoded({extended: true}));
 
 //accesing static files from assets folder
 app.use(express.static('./assets'));    
