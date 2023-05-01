@@ -9,6 +9,10 @@ body {
     height: 60px;
     background-color: #fff;
     box-shadow: 0px 5px 5px 0px  #ddd;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 .back-icon {
     font-size: 36px;

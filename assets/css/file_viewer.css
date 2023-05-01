@@ -8,6 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 20px 0;
+    margin-top: 80px;
 }
 .search-box {
     display: flex;
@@ -66,10 +67,9 @@ td {
   border-bottom: 1px solid #ddd;
   border-right: 2px solid #ddd;
 }
-tbody tr:nth-child(even) td {
-  background-color: #f2f2f2;
+.highlight {
+  background-color: rgba(70, 130, 180, 0.2);
 }
-
 
 
 

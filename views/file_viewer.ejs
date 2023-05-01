@@ -5,7 +5,7 @@
 
 
 <!-- header -->
-<div class="nav-bar">
+<div class="nav-bar" style="position: fixed;">
     <a href="/" class="back-icon">
         <i class="fa-solid fa-circle-arrow-left" style="color: #b8b8b8;"></i>
     </a>    
@@ -22,10 +22,10 @@
 
 <!-- search bar -->
 <div class="search-bar">
-    <form id="searchForm" action="javascript:search();">
+    <form id="searchForm">
         <div class="search-box">
             <input type="text" id="search-input" placeholder="Search data...">
-            <button id="go" type="submit">Go</button>
+            <button id="go" class="search-btn" type="button">Go</button>
         </div>
     </form>
     <div>
@@ -33,6 +33,7 @@
     </div>
 </div>
 
+<!-- search results -->
 <div>
     <table>
         <thead>
