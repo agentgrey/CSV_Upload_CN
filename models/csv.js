@@ -12,8 +12,13 @@ const fileSchema = new mongoose.Schema({
     type: String
   }
 }, {
-  timestamps: true,
+  timestamps: {
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt',
+    options: { timeZone: 'Asia/Kolkata' }
+  }
 });
+
 
 
 
